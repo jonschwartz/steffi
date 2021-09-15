@@ -1,0 +1,45 @@
+table-to-table: [
+    # convention: {table name}-{table name}, order doesn't matter
+    # for each table, an array of primary value columns should be defined.  
+    #
+    # If there is more than one column defined, order of the columns should be 
+    # maintained across tables to maintain the proper relationship.
+    #
+    tblUsers-tblEmails:
+        tblUsers: [
+            id
+        ],
+        tblOrders: [
+            userID
+        ]
+],
+column-to-graph: [
+    # Define the relationship between a table column and the graph.  
+    # Not all columns need to have a defined relationship, but the graph 
+    # will not be able to read or write to these columns.
+    tblUsers: [
+        id: [
+            graph-name: userID,
+            required-write: false
+        ],
+        name: [
+            graph-name: name,
+            required-write: true
+        ]
+    ]
+],
+table-types: [
+    # Define what types of queries / mutations will be created, 
+    # defaults to false if not defined
+    tblUsers: [
+        allow-create: true,
+        allow-read: true,
+        allow-update: true,
+        allow-delete: true
+    ]
+    # Define a graph type that crosses tables
+    tblUsers-tblEmails: [
+        name: UserEmails,
+        allow-read: true
+    ]
+]
