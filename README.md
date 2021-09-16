@@ -24,6 +24,14 @@ Once the setup files have been filled out, you just run the following in your fa
 
 and your service will be built in the ./service directory. From there, you're free to move it to it's own repository and deploy as you wish.
 
+### Options
+
+- -l, --log-level (one of 1, 2, 3, 4) enables more or less logging
+  - Level 4 (default) print everything out
+  - Level 3 print out warnings and errors
+  - Level 2 print out errors
+  - Level 1 print nothing
+
 ## Contributing
 
 See CONTRIBUTING.md for how you can contribute as well as our code of conduct

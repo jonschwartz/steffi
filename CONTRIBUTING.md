@@ -80,4 +80,4 @@ Feel free to message me on Twitter `@jonschwartz`. I'm not super active there, b
 
 ## Running the unit tests
 
-- I'll let you know when we have one
+- `python3 -m unittest steffi_test.py -v`
