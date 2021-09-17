@@ -1,3 +1,6 @@
+closes #{issue-number}
+Please mention the issue number which this PR fixes
+
 ### Your checklist for this pull request
 
 🚨Please review the [guidelines for contributing](../CONTRIBUTING.md) to this repository.
